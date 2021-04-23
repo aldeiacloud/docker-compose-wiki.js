@@ -16,15 +16,15 @@
 
 ------------------------------------------------------------------------------
 
-<b>4- </b>Logar na instância e atualizar a lista de repositórios. <br>apt update
+<b>4- </b>Logar na instância e atualizar a lista de repositórios. <br>$ apt update
 
 ------------------------------------------------------------------------------
 
-<b>5- </b>Instalar docker-compose e git. <br>sudo apt install docker-compose -y && sudo apt install git -y
+<b>5- </b>Instalar docker-compose e git. <br>$ sudo apt install docker-compose -y && sudo apt install git -y
 
 ------------------------------------------------------------------------------
 
-<b>6- </b> Clonar repositório. <br>git clone https://github.com/aldeiacloud/docker-compose-wiki.js.git
+<b>6- </b> Clonar repositório. <br>$ git clone https://github.com/aldeiacloud/docker-compose-wiki.js.git
 
 ------------------------------------------------------------------------------
 
