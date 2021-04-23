@@ -37,4 +37,4 @@ openssl req -new -newkey rsa:2048 -nodes -keyout privkey.key -out solicitacao.cs
 
 ------------------------------------------------------------------------------
 
-<b>9- </b> docker-compose up -d
+<b>9- </b> Subir o container.<brdocker-compose up -d
