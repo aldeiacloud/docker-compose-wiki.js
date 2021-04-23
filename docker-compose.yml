@@ -1,33 +1,39 @@
-# Compose para wiki-js - AldeiaCloud
-# 3 services: mongoDB, wiki-js e nginw para configurar o certificado SSL
-# Nao alterar o nomes dos services, apenas a porta 443 esta exposta.
-version: '3'
-
+version: "3"
 services:
-  mongo:
-    image: mongo
+
+  db:
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_DB: wiki
+      POSTGRES_PASSWORD: wikijsrocks
+      POSTGRES_USER: wikijs
+    logging:
+      driver: "none"
+    restart: unless-stopped
     volumes:
-    - "mongo-db:/data/db"
-# mongo-db volume is created for data persistence
+      - db-data:/var/lib/postgresql/data
 
   wiki:
-    build: ./wiki
-    volumes:
-    - "/Users/didier//wiki/repo:/var/wiki/repo:rw,z"
-#    - "/data/docker/persistent/wiki/repo:/var/wiki/repo:rw,z"
-# local git repository for wiki-js will be in /data/docker/persistent/wiki/repo
-    environment:
-    - WIKI_HOST=https://127.0.0.1:443 # Change hostname here if required
-    - WIKI_ADMIN_EMAIL=admin@example.com
+    image: requarks/wiki:2
     depends_on:
-      - "mongo"
-      
+      - db
+    environment:
+      DB_TYPE: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: wikijs
+      DB_PASS: wikijsrocks
+      DB_NAME: wiki
+    restart: unless-stopped
+    ports:
+      - "80:3000"
+
   nginx:
     build: ./nginx
     ports:
     - "443:443"
     depends_on:
       - "wiki"
-
+      
 volumes:
-  mongo-db:
+  db-data:
