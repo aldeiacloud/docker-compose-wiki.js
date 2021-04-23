@@ -1,7 +1,5 @@
 <b>RESUMO:</b><br>Configuração da Wiki.js em Ubuntu 18.04/20.04.
 
-<b>Vídeo da implementação: https://www.youtube.com/watch</b>
-
 ------------------------------------------------------------------------------
 
 <b>1- </b>Subir instância EC2 com Ubuntu 18.04 ou 20.04.
