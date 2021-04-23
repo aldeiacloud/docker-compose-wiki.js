@@ -1,4 +1,4 @@
-<b>RESUMO:</b><br>Configuração da Wiki.js em Ubuntu 18.04/20.04.
+<b>RESUMO:</b><br>Configuração da Wiki.js usando docker-compose em Ubuntu 18.04/20.04.
 
 ------------------------------------------------------------------------------
 
