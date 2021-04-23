@@ -33,7 +33,7 @@ openssl req -new -newkey rsa:2048 -nodes -keyout privkey.key -out solicitacao.cs
 
 ------------------------------------------------------------------------------
 
-<b>8- </b> Abrir <b>https://www.gogetssl.com/</b> e solicitar um certificado gratuito e adiciona-lo dentro de "/nginx/ssl/"
+<b>8- </b> Abrir <b>https://www.gogetssl.com/</b>, solicitar um certificado gratuito e adiciona-lo dentro de "/nginx/ssl/fullchain.crt"
 
 ------------------------------------------------------------------------------
 
