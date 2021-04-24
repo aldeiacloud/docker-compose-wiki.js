@@ -29,7 +29,7 @@
 ------------------------------------------------------------------------------
 
 <b>7- </b> Entrar no diretório "/nginx/ssl/" e depois usar o seguinte comando para solicitar os certificados.<br>
-openssl req -new -newkey rsa:2048 -nodes -keyout privkey.key -out solicitacao.csr
+$ openssl req -new -newkey rsa:2048 -nodes -keyout privkey.key -out solicitacao.csr
 
 ------------------------------------------------------------------------------
 
