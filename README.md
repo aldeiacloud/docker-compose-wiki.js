@@ -1,4 +1,6 @@
 <b>RESUMO:</b><br>Configuração da Wiki.js usando docker-compose em Ubuntu 18.04/20.04.
+<br>
+<b>Vídeo da implementação: https://www.youtube.com/watch</b>
 
 ------------------------------------------------------------------------------
 
